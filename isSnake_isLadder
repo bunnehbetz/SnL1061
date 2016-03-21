@@ -1,0 +1,89 @@
+#include <iostream>
+
+using namespace std;
+
+class SnakesAndLadder{
+private:
+  int pos;
+public:
+  int isSnake(int pos);
+  int isLadder(int pos);
+};
+
+
+int main(){
+  SnakesAndLadder test;
+  cout << "Snakes: " << test.isSnake(99) << endl;
+  cout << "Ladders: " << test.isLadder(71) << endl;
+  return 0;
+}
+
+int SnakesAndLadder::isSnake(int pos){
+  int checkpos = pos;
+  switch(pos){
+	case 17:
+  	pos = 7;
+  	break;
+	case 54:
+  	pos = 34;
+  	break;
+	case 62:
+  	pos = 19;
+  	break;
+	case 64:
+  	pos = 60;
+  	break;
+	case 87:
+  	pos = 24;
+  	break;
+	case 93:
+  	pos = 73;
+  	break;
+	case 95:
+  	pos = 75;
+  	break;
+	case 99:
+  	pos = 78;
+  	break;
+  }
+  if (checkpos != pos){
+	cout << "You landed on " << checkpos << ". There was a snake so you moved to " << pos << "." << endl;
+  }
+  return pos;
+}
+
+int SnakesAndLadder::isLadder(int pos){
+  int checkpos = pos;
+  switch(pos){
+	case 4:
+  	pos = 14;
+  	break;
+	case 9:
+  	pos = 31;
+  	break;
+	case 20:
+  	pos = 38;
+  	break;
+	case 28:
+  	pos = 84;
+  	break;
+	case 40:
+  	pos = 59;
+  	break;
+	case 51:
+  	pos = 67;
+  	break;
+	case 63:
+  	pos = 81;
+  	break;
+	case 71:
+  	pos = 91;
+  	break;
+  }
+  if (checkpos != pos){
+	cout << "You landed on " << checkpos << ". There was a ladder so you moved to " << pos << "." << endl;
+  }
+  return pos;
+}
+
+
